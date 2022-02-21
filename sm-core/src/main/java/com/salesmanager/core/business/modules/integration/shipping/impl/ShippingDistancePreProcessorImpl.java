@@ -31,6 +31,8 @@ import com.salesmanager.core.modules.constants.Constants;
 import com.salesmanager.core.modules.integration.IntegrationException;
 import com.salesmanager.core.modules.integration.shipping.model.ShippingQuotePrePostProcessModule;
 
+import static com.google.maps.GeoApiContext.*;
+
 /**
  * Uses google api to get lng, lat and distance in km for a given delivery address
  * The route will be displayed on a map to the end user and available
@@ -125,9 +127,9 @@ public class ShippingDistancePreProcessorImpl implements ShippingQuotePrePostPro
 		}
 		
 		Validate.notNull(apiKey, "Requires the configuration of google apiKey");
-		
-		GeoApiContext context = new GeoApiContext().setApiKey(apiKey);
-		
+
+		GeoApiContext context = new GeoApiContext.Builder().apiKey(apiKey).build();
+
 		//build origin address
 		StringBuilder originAddress = new StringBuilder();
 		
