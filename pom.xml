@@ -71,7 +71,7 @@
 		<jackson-version>2.12.6</jackson-version>
 		<geoip2.version>3.0.0</geoip2.version>
 		<drools.version>7.65.0.Final</drools.version>
-		<google-client-maps-services-version>1.0.1</google-client-maps-services-version>
+		<google-client-maps-services-version>0.10.0</google-client-maps-services-version>
 		<jwt.version>0.8.0</jwt.version>
 
 
@@ -285,7 +285,7 @@
 			<dependency>
 				<groupId>com.amazonaws</groupId>
 				<artifactId>aws-java-sdk-s3</artifactId>
-				<version>1.12.162</version>
+				<version>1.12.245</version>
 			</dependency>
 
 			<!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-ses -->
